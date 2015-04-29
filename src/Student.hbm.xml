@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.cache.Student" table="student_data">
+<cache usage="read-only" />
+<id name="student_id">
+<generator class="assigned"></generator>
+</id>
+<property name="student_name" column="s_name" length="30"></property> 
+<property name="student_course" column="s_course" length="30"></property>
+</class>
+</hibernate-mapping>
